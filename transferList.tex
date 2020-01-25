@@ -1,0 +1,218 @@
+\documentclass[platex, dvipdfmx, a4paper]{jarticle}
+% パッケージ
+\usepackage{graphicx}
+\usepackage{color}
+% ラテン文字を欧文扱い
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% 数式
+\usepackage{amsmath}
+\usepackage{textcomp}
+% SI単位
+\usepackage{siunitx}
+% 表のデザイン
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{listings}
+% 組版
+\usepackage[centering, pass, dvipdfm]{geometry}
+% use H
+\usepackage{float}
+% bibLatex
+\usepackage[backend = biber, bibstyle = ieee]{biblatex}
+\addbibresource{reference.bib}
+% 参考文献をいれる
+% .を含むファイルも読み込める
+\DeclarePrefChars{'-}
+
+\addbibresource{reference.bib}
+
+\title{編入可能大学一覧}
+\author{浜崎拓海\thanks{一関工業高等専門学校　5S}}
+\date{}
+
+\begin{document}
+    \maketitle
+    %目次の出力
+    \tableofcontents
+
+    それぞれの種類の大学の一覧を挙げておきます。\cite{大学編入実施主要67:online}注意点があるときは追記します。
+    また、私立大学に関しては高専生が主に進学\cite{gaiyou2016:online}していった進学先を挙げます。文系大学にも編入することは可能ですが単位数が足りず入学と同時に留年もあり得るので気を付けましょう。基本的に学力入試、編入先は理学部、または工学部を前提に考えています。他のこのデータは2020年度入学者のデータなので年によって変わる可能性があるので気になった大学があれば自分で調べましょう。
+    \clearpage
+    \section{国立大学}
+      \subsection{北海道地方}
+        \begin{itemize}
+          \item 北海道大学
+            \\工学部は推薦あり（若干名の募集）
+          \item 室蘭工業大学
+            \\全コース推薦あり（定員あり）
+          \item 北見工業大学
+            \\推薦あり（定員あり）
+        \end{itemize}
+      \subsection{東北地方}
+        \begin{itemize}
+          \item 弘前大学
+            \\理工学部は推薦あり
+          \item 岩手大学
+          \item 秋田大学
+            \\Toeicスコア提出
+          \item 東北大学
+            \\Toeicスコア提出（理学部は提出なし）
+          \item 山形大学
+            \\一応あるっぽい。要項は挙がっていなかったが合格発表は乗っていた
+          \item 福島大学
+            \\共生システム理工学類、経済経営学類の募集で共に推薦のみ（若干名）
+        \end{itemize}
+      \subsection{関東地方}
+        \begin{itemize}
+          \item 宇都宮大学
+            \\応用化学科は推薦のみ（定員あり）　電気電子工学科は推薦あり（定員あり）
+            学力はToeicスコア提出
+          \item 茨城大学
+            \\学力のみToeicスコア提出　推薦あり（定員あり）
+          \item 筑波大学
+            \\Toeicスコア提出
+          \item 群馬大学
+            \\環境創生理工学科社会基盤防災コースは推薦のみ（定員あり）　機能知能システム理工学科は推薦あり（定員あり）
+          \item 埼玉大学
+          \item 千葉大学
+            \\推薦と自己推薦のみ
+          \item お茶の水女子大学
+            \\女子のみ受験可　Toeicスコア提出
+          \item 電気通信大学
+            \\推薦あり（定員あり）
+          \item 東京大学
+            \\2年次編入
+          \item 東京海洋大学
+            \\推薦あり（定員あり）
+          \item 東京工業大学
+          \item 東京農工大学
+            \\推薦あり（定員あり）
+          \item 横浜国立大学
+            \\Toeicスコア提出
+        \end{itemize}
+      \subsection{中部地方}
+        \begin{itemize}
+          \item 新潟大学
+            \\推薦あり（定員あり） Toeicスコア提出
+          \item 信州大学
+            \\推薦あり（定員あり） Toeicスコア提出
+          \item 山梨大学
+            \\推薦あり（定員あり）
+          \item 静岡大学
+            \\学力のみToeicスコア提出 推薦あり（若干名）
+          \item 名古屋大学
+            \\来年からToeicスコア提出
+          \item 富山大学
+            \\推薦あり（定員あり） Toeicスコア提出
+          \item 金沢大学
+            \\要項が見当たらなかったが学科によって推薦あり(?)　 Toeicスコア提出なし(?)
+          \item 福井大学
+            \\学校推薦、自己推薦、一般推薦あり（各学科ごとに定員か若干名か変わる）
+            機械システム工学科および電気電子情報工学科の一般試験の志願者はToeicのスコアを提出
+          \item 岐阜大学
+            \\推薦あり（定員あり） 一般試験のみToeicスコア提出
+          \item 豊橋技科大学
+            \\推薦あり（いっぱい） 特別推薦あり　GACというToeicのスコアがないと出願できない学科がある
+          \item 長岡技科大学
+            \\推薦あり（いっぱい）
+        \end{itemize}
+      \subsection{近畿地方}
+        \begin{itemize}
+          \item 三重大学
+            \\機械科、電気電子工学科のみ推薦あり（定員あり） 機械科の一般のみToeicスコア提出
+          \item 京都大学
+            \\Toeflスコア提出
+          \item 京都工芸繊維大学
+            \\推薦あり（若干名）一般はToeicスコア提出
+          \item 大阪大学
+          \item 奈良女子大学
+            \\女子のみ出願可　推薦あり（若干名）
+          \item 神戸大学
+          \item 和歌山大学
+            \\推薦あり（学校推薦、自己推薦定員あり）
+        \end{itemize}
+      \subsection{中国地方}
+        \begin{itemize}
+          \item 島根大学
+            \\推薦あり（若干名）
+          \item 岡山大学
+            \\推薦あり（定員あり）
+          \item 広島大学
+          \item 山口大学
+            \\応用化学化　電気電子工学科　感性デザイン工学科　循環環境工学科は推薦あり（定員あり）
+        \end{itemize}
+      \subsection{四国地方}
+        \begin{itemize}
+          \item 徳島大学
+            \\推薦あり（定員あり）
+          \item 香川大学
+            \\一般試験のみToeicスコア提出　推薦あり（定員あり）
+          \item 愛媛大学
+            \\環境建築工学科　機能材料工学科　応用化学科　情報工学科は推薦あり（定員あり）
+          \item 高知大学
+        \end{itemize}
+      \subsection{九州地方}
+        \begin{itemize}
+          \item 九州大学
+            \\推薦あり（若干名）　経済工学部の推薦もあるらしい
+          \item 九州工業大学
+            \\工学部は推薦のみ　情報工学部は推薦あり（定員あり）
+          \item 佐賀大学
+            \\推薦あり（定員あり）　
+          \item 長崎大学
+            \\環境科学部のみ募集
+          \item 熊本大学
+            \\推薦あり（定員あり）
+          \item 大分大学
+            \\推薦あり（定員あり）
+          \item 宮崎大学
+            \\推薦あり（若干名）
+          \item 鹿児島大学
+            \\詳細が掲載されていませんでした　推薦あり（定員あり？）
+          \item 琉球大学
+        \end{itemize}
+    \section{公立大学}
+      \subsection{東北地方}
+      \begin{itemize}
+        \item 秋田県立大学
+          \\生物資源科学部　システム科学技術学部建築環境システム工学科、経営システム工学科は推薦のみ（若干名）
+        \item 岩手県立大学
+      \end{itemize}
+      \subsection{関東地方}
+        \begin{itemize}
+          \item 首都大学東京
+            \\理学部　都市環境学部はToeicスコア提出
+        \end{itemize}
+      \subsection{近畿地方}
+        \begin{itemize}
+          \item 大阪府立大学
+            \\機械科のみToeicスコア提出なし
+          \item 兵庫県立大学
+          \item 滋賀県立大学
+            \\Toeicスコア提出
+        \end{itemize}
+      \subsection{四国地方}
+        \begin{itemize}
+          \item 高知工科大学
+            \\調査書　面接のみ
+        \end{itemize}
+      \subsection{九州地方}
+        \begin{itemize}
+          \item 北九州市立大学
+            \\推薦あり（若干名）
+        \end{itemize}
+    \section{私立大学}
+      \begin{itemize}
+        \item 千葉工業大学
+          \\一関高専ではクラスで1人推薦がもらえる
+        \item 武蔵野美術大学
+          \\2年時編入　作品提出
+        \item 早稲田大学
+          \\Toeic,Toefl,Ieltsのいずれかのスコアの提出
+      \end{itemize}
+      \printbibliography[title=参考文献]
+\end{document}
